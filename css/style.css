@@ -12,7 +12,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  outline: none;
+  outblack: none;
   text-transform: capitalize;
 }
 
@@ -56,14 +56,14 @@ header {
 header .navbar a {
   --s: 0.15em;
 
-  line-height: 1.1em;
+  black-height: 1.1em;
   padding-bottom: calc(2.1 * var(--s));
   background: conic-gradient(from 135deg at top, var(--cream) 90deg, #0000 0)
       left 0 bottom var(--s) / calc(2 * var(--s)) var(--s) repeat-x,
     conic-gradient(from -45deg at bottom, var(--cream) 90deg, #0000 0) left
       var(--s) bottom 0 / calc(2 * var(--s)) var(--s) repeat-x;
-  -webkit-mask: linear-gradient(#000 0 0) content-box,
-    linear-gradient(#000 0 0) 0 / var(--_p, 0%) padding-box no-repeat;
+  -webkit-mask: blackar-gradient(#000 0 0) content-box,
+    blackar-gradient(#000 0 0) 0 / var(--_p, 0%) padding-box no-repeat;
   transition: 0.5s;
   text-decoration: none;
   font-size: 1.2rem;
@@ -103,12 +103,12 @@ header .navbar a:hover {
 .home .home-slider .content h2 {
   color: var(--green);
   font-size: 3rem;
-  line-height: 1.6;
+  black-height: 1.6;
 }
 
 .home .home-slider .content p {
   font-size: 1.3rem;
-  line-height: 1.6;
+  black-height: 1.6;
 }
 
 .home .home-slider .slide .image img {
@@ -141,15 +141,15 @@ header .navbar a:hover {
   box-sizing: border-box;
   color: #121212;
   cursor: pointer;
-  display: inline-flex;
+  display: inblack-flex;
   flex: 1 1 auto;
   font-family: Inter, sans-serif;
   font-size: 0.9rem;
   font-weight: 700;
   justify-content: center;
-  line-height: 1;
+  black-height: 1;
   margin: 2rem 0;
-  outline: none;
+  outblack: none;
   padding: 1rem 1.2rem;
   text-align: center;
   text-decoration: none;
@@ -164,18 +164,25 @@ header .navbar a:hover {
 .shop-btn:hover {
   box-shadow: var(--cream) 0 0 0 2px, transparent 0 0 0 0;
 }
+
+
 /* *Product Grid */
 .product-grid {
   display: grid;
   gap: 2rem;
   margin-bottom: 80px;
+  width:95%;  /*changed*/
+  height: auto; /*changed*/
+  margin-left:55px; /*changed*/
 }
 
 .grid-4 {
-  grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); /*changed*/
 }
 
 .product-card {
+  width: 300px;
+  height: auto;
   background: #f1f0f0;
   border-radius: 12px;
   overflow: hidden;
@@ -188,7 +195,7 @@ header .navbar a:hover {
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
 }
 .product-image img {
-  width: 500px;
+  width: 300px; /*changed*/
   height: auto;
   object-fit: contain;
 }
@@ -203,6 +210,187 @@ header .navbar a:hover {
   font-size: 2rem;
 }
 /* *Footer */
+/* start of my code*/
+.section-header{
+  padding-left: 25px;
+  padding-bottom: 10px;
+}
+.items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.items h1{
+  margin-bottom: 10px;
+}
+.items h2{
+  margin-bottom: 10px;
+}
+.slideimgtag{
+    display:flex;
+    flex-direction: row;
+    height:80px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+  .carousel {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 40px;
+    transition: transform 0.5s ease; /* smooth animation */
+  }
+
+  .carousel img {
+    width: 250px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.5s ease;
+  }
+
+  .buttons {
+    margin-top: 20px;
+  }
+
+  button {
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #666;
+  }
+
+  
+.gallery {
+  padding: 40px 20px;
+  background: #fff;
+  color: #000;
+}
+
+.gallery h1 {
+  font-size: 2.5rem;
+  margin-bottom: 5px;
+}
+
+.gallery h2 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 40px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 30px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.item img {
+  width: 100%;
+  border-radius: 16px;
+  background: #23272f;
+  display: block;
+}
+
+.item p {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: #333;
+}
+/*end my codes*/
+
+
+.footer{
+  color:var(--cream);
+  border-top:1px solid var(--black);
+  margin-top:40px;
+   background-color:var(--green) ;
+}
+
+.footer__inner{
+  width:100%;
+  margin:0 auto;
+  padding:36px 20px;
+  display:grid;
+  grid-template-columns:repeat(4, minmax(0, 1fr));
+  gap:28px;
+}
+
+.footer__col{
+  font-size:15px
+}
+.footer__logo{  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2em;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  overflow: hidden;              /* clip anything that spills out */
+  display: inline-grid;          /* or flex */
+  place-items: center;   
+}
+.footer__about{
+  color:var(--cream);
+  margin:8px 0 14px}
+
+.footer__title{
+  font-size:16px;
+  font-weight:700;
+  margin:0 0 10px;
+}
+.footer__list{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+.footer__list a{color:var(--cream);text-decoration:none}
+.footer__list a:hover{color:#000;text-decoration:underblack}
+
+.footer__social{display:flex;gap:10px}
+.footer__social a{display:grid;place-items:center;width:36px;height:36px;border:1px solid var(--black);border-radius:10px;background:#f7f7f7}
+.footer__social svg{width:18px;height:18px;fill:var(--grey)}
+
+.footer__form{display:flex;gap:10px;margin-top:8px}
+.footer__form input{
+  flex:1;padding:10px 12px;border:1px solid var(--black);border-radius:10px;outblack:none
+}
+.footer__form button{
+  padding:10px 14px;border:none;
+  color:#000;
+  background:var(--cream);cursor:pointer
+}
+.footer__form button:hover{
+   background:rgb(45, 62, 45);}
+
+.footer__hint{color:var(--green);margin:0 0 6px}
+.footer__msg{color:#0a7a28;margin:8px 0 0}
+
+.footer__bottom{
+  border-top:1px solid var(--black);
+  display:flex;gap:12px;justify-content:space-between;align-items:center;
+  max-width:100%;
+}
+.footer__bottom p{display:flex;flex-direction:flex-start;color:var(--muted);}
+.footer__top{color:black;background-color:#f7f7f7;border:none;padding:6px 10px;cursor:pointer;display:flex;flex-direction: flex-end;}
+
+
+
+
+
+
+
+/* 
 footer {
   background-color: var(--green);
   color: var(--cream);
@@ -261,4 +449,4 @@ footer {
 .copyright {
   color: var(--grey);
   font-size: 1.2rem;
-}
+}*/
