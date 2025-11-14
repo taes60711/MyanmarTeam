@@ -28,6 +28,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 100px;
   padding: 1.7rem 2rem;
   background-color: var(--green);
   box-shadow: var(--box-shadow);
@@ -38,6 +39,10 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.height {
+  height: 50px;
 }
 
 .logo a {
