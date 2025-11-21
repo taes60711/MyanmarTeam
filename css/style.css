@@ -15,6 +15,10 @@
   text-transform: capitalize;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Lato", sans-serif;
   padding-top: 100px;
@@ -46,10 +50,6 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.height {
-  height: 50px;
 }
 
 .logo a {
