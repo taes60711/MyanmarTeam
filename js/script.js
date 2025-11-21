@@ -1,3 +1,42 @@
+const menuBar = document.getElementById("menu-bar");
+const navBar = document.querySelector(".navbar");
+
+menuBar.addEventListener("click", (e) =>{
+  e.stopPropagation();
+  navBar.classList.toggle("active");
+})
+
+window.addEventListener("click", (e) =>{
+  if(!e.target.closest("#menu-bar") && !e.target.closest(".navbar")){
+    navBar.classList.remove("active");
+  }
+})
+window.addEventListener("scroll", ()=>{
+  navBar.classList.remove("active");
+})
+
+const navLinks = document.querySelectorAll(".navbar a");
+    navLinks.forEach(link => {
+      link.addEventListener("click", () => {
+        navBar.classList.remove("active");
+      });
+    });
+    // const section = document.querySelectorAll("section");
+    // section.forEach((sec) => {
+    //   let top = window.scrollY;
+    //   let height = sec.offsetHeight;
+    //   let offset = sec.offsetTop - 150;
+    //   let id = sec.getAttribute("id");
+
+    //   if(top >= offset && top < offset + height){
+    //     navLinks.forEach((links) => {
+    //       links.classList.remove("active");
+    //       document.querySelector("header .navbar a[href*=" + id + "]")
+    //       .classList.add("active");
+    //     })
+    //   }
+    // })
+
 var swiper = new Swiper(".mySwiper", {
   spaceBetween: 30,
   centeredSlides: true,
