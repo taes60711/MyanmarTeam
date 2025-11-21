@@ -95,7 +95,6 @@ header .navbar a:hover {
   flex-wrap: wrap;
   align-items: center;
   gap: 2rem;
-  padding: 1.8rem 0;
 }
 
 .home .home-slider .content {
